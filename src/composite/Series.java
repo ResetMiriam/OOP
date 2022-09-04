@@ -1,6 +1,5 @@
 package composite;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class Series implements LibraryItem {
 
     @Override
     public void render() {
-        System.out.println("Rendering SERIE");
+        System.out.println("Rendering SERIES");
         System.out.println(".... showing SERIE "+serieName);
 
     }
