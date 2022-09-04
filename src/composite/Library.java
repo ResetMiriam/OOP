@@ -10,24 +10,23 @@ public class Library implements LibraryItem {
 
     @Override
     public void render() {
-        for(LibraryItem sh : items)
-        {
+        for (LibraryItem sh : items) {
             sh.render();
         }
     }
 
     //adding item to library
-    public void add(LibraryItem s){
+    public void add(LibraryItem s) {
         this.items.add(s);
     }
 
     //removing item from library
-    public void remove(LibraryItem s){
+    public void remove(LibraryItem s) {
         items.remove(s);
     }
 
     //removing all the items
-    public void clear(){
+    public void clear() {
         System.out.println("Clearing all the items from Library");
         this.items.clear();
     }
