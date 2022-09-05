@@ -1,31 +1,36 @@
 package composite;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Series implements LibraryItem {
 
     public String serieName;
-    private ArrayList<LibraryItem> Series = new ArrayList<>();
+    public int serieId;
+    public List<String> listBooks;
 
-    public Series(String serieName) {
+
+    public Series(String serieName, int serieId, List<String> listBooks) {
         this.serieName = serieName;
+        this.serieId = serieId;
+        this.listBooks = listBooks;
+
+
     }
 
-    //adding item to series
-    public void add(LibraryItem s) {
-        this.Series.add(s);
+    public int getNoBooks() {
+        return listBooks.size();
     }
 
-    //removing item from series
-    public void remove(LibraryItem s) {
-        Series.remove(s);
+    public void expands() {
+        listBooks.forEach(System.out::println);
     }
 
     @Override
     public void render() {
         System.out.println("Rendering SERIES");
-        System.out.println(".... showing SERIE "+serieName);
-
+        System.out.println(".... showing SERIE " + serieName);
+        System.out.println(".... this serie has " + getNoBooks() + "books");
+        System.out.println(".... The books of this serie are: ");
+        expands();
     }
 }

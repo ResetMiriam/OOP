@@ -1,6 +1,8 @@
 package composite;
 
 public class Magazine implements LibraryItem {
+    public Magazine(String magazineName) {
+    }
 
     @Override
     public void render() {
